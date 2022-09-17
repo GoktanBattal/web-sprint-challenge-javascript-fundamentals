@@ -211,7 +211,7 @@ CuboidMaker.prototype.volume = function(){
 */
 
 CuboidMaker.prototype.surfaceArea = function(){
-  return (this.length * this.width) + (this.length * this.height) + (this.width * this.height)
+  return 2*((this.length * this.width) + (this.length * this.height) + (this.width * this.height))
 }
 
 
@@ -233,8 +233,22 @@ CuboidMaker.prototype.surfaceArea = function(){
 //Using CuboidMakerTwo, take your prototypes from above and refactor into class syntax. Then, create an object called cuboidTwo that uses the new keyword to use our CuboidMakerTwo class.
  
 class CuboidMakerTwo{
+  constructor(attrs){
+    this.length = attrs.length;
+    this.height = attrs.height;
+    this.width = attrs.width;
+  }
+
+volume(){
+  return this.length * this.width * this.height
+}
+
+surfaceArea(){
+  return 2*((this.length * this.width) + (this.length * this.height) + (this.width * this.height))
+}
 
 }
+
 
 
 
