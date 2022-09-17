@@ -187,8 +187,11 @@ function greeting(firstName, lastName){
 - Instances of CuboidMaker should initialize `length`, `width` and `height` properties
 */
 
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+
+function CuboidMaker(attrs){
+  this.length = attrs.length;
+  this.height = attrs.height;
+  this.width = attrs.width;
 }
 
 
@@ -197,7 +200,9 @@ function CuboidMaker(/*Your Code Here */){
   💡 NOTE: Formula for cuboid volume: length * width * height   
 */
 
-
+CuboidMaker.prototype.volume = function(){
+  return this.length * this.width * this.height
+}
 
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
@@ -205,7 +210,9 @@ function CuboidMaker(/*Your Code Here */){
   💡 NOTE: Formula for cuboid surface area: 2 * (length * width + length * height + width * height)  
 */
 
-
+CuboidMaker.prototype.surfaceArea = function(){
+  return (this.length * this.width) + (this.length * this.height) + (this.width * this.height)
+}
 
 
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker (not auto graded)🐴🐴🐴
