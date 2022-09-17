@@ -141,7 +141,7 @@ const zooAnimals = [
  */
 
 function add(num1,num2){
-  return consume (num1,num2,add)
+  return num1 + num2
   }
 
 
